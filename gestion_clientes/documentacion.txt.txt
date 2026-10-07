@@ -1,0 +1,92 @@
+DOCUMENTACIÓN - GESTIÓN DE CLIENTES
+
+Base de datos:
+gestion_clientes
+
+TABLA CLIENTES
+
+Nombre: clientes
+
+Campos:
+
+id_cliente
+- Tipo: INT
+- Clave primaria
+- AUTO_INCREMENT
+- Identifica de manera única a cada cliente.
+
+nombre
+- Tipo: VARCHAR(50)
+- No puede quedar vacío.
+- Guarda el nombre del cliente.
+
+apellido
+- Tipo: VARCHAR(50)
+- No puede quedar vacío.
+- Guarda el apellido del cliente.
+
+email
+- Tipo: VARCHAR(100)
+- No puede quedar vacío.
+- Guarda el correo electrónico del cliente.
+
+telefono
+- Tipo: VARCHAR(20)
+- No puede quedar vacío.
+- Guarda el número de teléfono del cliente.
+
+
+TABLA PEDIDOS
+
+Nombre: pedidos
+
+Campos:
+
+id_pedido
+- Tipo: INT
+- Clave primaria
+- AUTO_INCREMENT
+- Identifica de manera única cada pedido.
+
+id_cliente
+- Tipo: INT
+- Clave foránea.
+- Relaciona el pedido con un cliente de la tabla clientes.
+
+fecha
+- Tipo: DATE
+- Guarda la fecha en la que se realizó el pedido.
+
+producto
+- Tipo: VARCHAR(100)
+- Guarda el nombre del producto comprado.
+
+importe
+- Tipo: DECIMAL(10,2)
+- Guarda el importe del pedido.
+
+
+RELACIÓN ENTRE TABLAS
+
+La tabla clientes se relaciona con la tabla pedidos mediante:
+
+clientes.id_cliente
+        ↓
+pedidos.id_cliente
+
+Un cliente puede tener varios pedidos.
+
+Por lo tanto, la relación es:
+
+CLIENTES 1 -------- N PEDIDOS
+
+
+OPERACIONES IMPLEMENTADAS
+
+- Alta de clientes.
+- Listado de clientes.
+- Modificación de clientes.
+- Eliminación de clientes.
+- Consulta de clientes y pedidos mediante INNER JOIN.
+- Validación de datos.
+- Consultas preparadas para INSERT, UPDATE y DELETE.
