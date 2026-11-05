@@ -1,0 +1,7 @@
+FinanzasPersonales - Entrega 2
+1. Abrir en NetBeans: File > Open Project > elegir la carpeta FinanzasPersonales (descomprimida).
+2. Iniciar MySQL (y Apache) en XAMPP.
+3. Verificar en phpMyAdmin con DESCRIBE movimientos; que las columnas coincidan con MovimientoDAO.
+4. Ajustar los IDs en PruebaInsercion.java.
+5. Clean and Build; Run File en PruebaJDBC y luego (una sola vez) PruebaInsercion.
+Si tu JDK es 11, cambiar 17 por 11 en pom.xml.
