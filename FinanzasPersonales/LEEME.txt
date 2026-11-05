@@ -1,7 +1,13 @@
-FinanzasPersonales - Entrega 2
-1. Abrir en NetBeans: File > Open Project > elegir la carpeta FinanzasPersonales (descomprimida).
-2. Iniciar MySQL (y Apache) en XAMPP.
-3. Verificar en phpMyAdmin con DESCRIBE movimientos; que las columnas coincidan con MovimientoDAO.
-4. Ajustar los IDs en PruebaInsercion.java.
-5. Clean and Build; Run File en PruebaJDBC y luego (una sola vez) PruebaInsercion.
-Si tu JDK es 11, cambiar 17 por 11 en pom.xml.
+FinanzasPersonales - Entrega 3 (continúa la Entrega 2)
+
+ORDEN DE TRABAJO
+1. Abrir el proyecto en NetBeans, iniciar MySQL y Apache en XAMPP.
+2. phpMyAdmin: verificar columnas reales
+     DESCRIBE movimientos;  DESCRIBE categorias;  DESCRIBE cuentas;  DESCRIBE usuarios;
+   Necesarias: categorias.tipo_permitido y cuentas.id_usuario (si se llaman distinto, avisar).
+3. Ejecutar sql/presupuestos.sql (leer los comentarios iniciales; ajustar IDs).
+4. Clean and Build.
+5. Ejecutar: PruebaCrud, PruebaCasos, PruebaConsultas (Run File). Capturar la consola.
+6. Capturas en phpMyAdmin con sql/consultas_entrega3.sql.
+7. Completar docs/INFORME_PLANTILLA.md con los números reales.
+Ajustar los IDs en PruebaCrud.java y PruebaCasos.java (ID_CUENTA, ID_CATEGORIA).
