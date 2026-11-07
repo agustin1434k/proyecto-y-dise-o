@@ -1,0 +1,20 @@
+TRABAJO INTEGRADOR - FINANZAS PERSONALES INTELIGENTES (Entrega 4, Swing)
+
+CÓMO EJECUTARLO
+1. Descomprimir. En NetBeans: File > Open Project > carpeta TrabajoIntegrador.
+2. Iniciar MySQL y Apache en XAMPP.
+3. Si todavía no existe la tabla presupuestos: ejecutar sql/presupuestos.sql en phpMyAdmin
+   (leer los comentarios del principio y ajustar los IDs).
+4. Clic derecho en el proyecto > Clean and Build.
+5. Clic derecho en Main.java > Run File (o botón Run). Se abre la aplicación.
+6. En src/main/java/ar/edu/finanzas/conexion/ConexionBD.java: usuario/clave de tu MySQL.
+
+SUPUESTOS SOBRE TU BASE (verificar con DESCRIBE en phpMyAdmin)
+- movimientos: id_movimiento, id_cuenta, id_categoria, tipo, fecha, importe, descripcion, medio_pago, recurrente
+- categorias: id_categoria, nombre, tipo_permitido (INGRESO/GASTO/AMBOS)
+- cuentas: id_cuenta, id_usuario y una columna con el nombre (se detecta sola: nombre, alias...)
+- usuarios: id_usuario
+Si algo falla, la aplicación muestra el error exacto en una ventana: copiarlo.
+
+REQUIERE JDK 17 o superior (si tenés 11, cambiar 17 por 11 en pom.xml).
+Documentación: docs/GUIA_PRESENTACION.md
