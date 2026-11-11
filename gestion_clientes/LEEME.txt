@@ -1,0 +1,7 @@
+Semana 1 - reportes.php
+1. Copiar reportes.php a htdocs/gestion_clientes/ (NO reemplazar conexion.php si ya funciona).
+2. Abrir http://localhost/gestion_clientes/reportes.php
+3. Si falla por nombres de tablas/columnas, editar el bloque 1 al comienzo del archivo.
+4. conexion.php.ejemplo es solo referencia (reportes.php necesita un objeto PDO en $pdo).
+5. verificacion_phpmyadmin.sql: consultas para comparar resultados.
+Detalles y guion de presentación: GUIA_PRESENTACION.md
