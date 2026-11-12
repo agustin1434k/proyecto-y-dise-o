@@ -1,0 +1,108 @@
+/* css/estilos.css - hoja de estilos compartida por TODAS las páginas */
+:root {
+    --azul: #1f3a5f; --azul-claro: #2f6fb0; --verde: #2e8b57; --rojo: #c0392b;
+    --ambar: #d68910; --gris: #5f6b7a; --borde: #d9dee7; --fondo: #f1f4f9;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: var(--fondo); color: #1c2733;
+       min-height: 100vh; display: flex; flex-direction: column; }
+a { color: var(--azul-claro); }
+
+/* Encabezado, menú y pie */
+.encabezado { background: var(--azul); color: #fff; }
+.encabezado-interno { max-width: 1100px; margin: auto; padding: 20px 16px; }
+.encabezado h1 { margin: 0; font-size: 1.7rem; }
+.encabezado p { margin: 4px 0 0; color: #bfd2e6; }
+.menu { background: #16304f; }
+.menu ul { max-width: 1100px; margin: auto; padding: 0 8px; list-style: none; display: flex; flex-wrap: wrap; }
+.menu a { display: block; padding: 12px 16px; color: #dbe7f3; text-decoration: none; font-weight: 600; font-size: .95rem; }
+.menu a:hover { background: #20426b; color: #fff; }
+.menu a.activo { background: var(--azul-claro); color: #fff; }
+.pie { background: var(--azul); color: #bfd2e6; text-align: center; padding: 16px; margin-top: auto; font-size: .9rem; }
+.pie p { margin: 0; }
+
+/* Contenedores */
+.contenedor { max-width: 1100px; width: 100%; margin: 24px auto; padding: 0 16px; flex: 1; }
+.tarjeta { background: #fff; border: 1px solid var(--borde); border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+.tarjeta h2 { margin: 0 0 14px; font-size: 1.2rem; color: var(--azul); }
+.barra-superior { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.barra-superior h2 { margin: 0; }
+.titulo-pagina { color: var(--azul); margin: 0 0 16px; }
+
+/* Panel principal */
+.panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.acceso { background: #fff; border: 1px solid var(--borde); border-top: 4px solid var(--azul-claro); border-radius: 10px;
+          padding: 20px; text-decoration: none; color: inherit; display: block; transition: box-shadow .15s, transform .15s; }
+.acceso:hover { box-shadow: 0 6px 16px rgba(31,58,95,.15); transform: translateY(-2px); }
+.acceso h3 { margin: 0 0 6px; color: var(--azul); }
+.acceso p { margin: 0; color: var(--gris); font-size: .92rem; }
+.acceso .cifra { font-size: 1.8rem; font-weight: 700; color: var(--azul-claro); margin-bottom: 4px; }
+.acceso.verde { border-top-color: var(--verde); }
+.acceso.ambar { border-top-color: var(--ambar); }
+.acceso.rojo { border-top-color: var(--rojo); }
+
+/* Formularios */
+.formulario { display: grid; gap: 16px; max-width: 560px; }
+form.filtros { display: grid; grid-template-columns: 2fr 1.3fr 1fr 1fr auto; gap: 14px; align-items: end; }
+form.filtros-simple { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; }
+.campo { display: flex; flex-direction: column; gap: 5px; }
+.campo label { font-size: .85rem; font-weight: 600; color: var(--gris); }
+input[type=text], input[type=date], select { padding: 10px; border: 1px solid var(--borde); border-radius: 6px;
+        font-size: .95rem; width: 100%; background: #fff; font-family: inherit; }
+input:focus, select:focus { outline: 2px solid var(--azul-claro); border-color: var(--azul-claro); }
+.error-campo { color: var(--rojo); font-size: .85rem; }
+.acciones-form { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+/* Botones */
+.btn { display: inline-block; padding: 10px 18px; border-radius: 6px; border: 0; font-size: .9rem; font-weight: 600;
+       text-decoration: none; cursor: pointer; text-align: center; font-family: inherit; }
+.btn-primario { background: var(--azul-claro); color: #fff; }
+.btn-primario:hover { background: var(--azul); }
+.btn-secundario { background: #e7ebf1; color: var(--azul); }
+.btn-secundario:hover { background: #d5dbe5; }
+.btn-verde { background: var(--verde); color: #fff; }
+.btn-verde:hover { background: #256f46; }
+.btn-peligro { background: var(--rojo); color: #fff; }
+.btn-peligro:hover { background: #962d22; }
+.btn-chico { padding: 6px 12px; font-size: .82rem; }
+
+/* Mensajes */
+.alerta { padding: 14px 18px; border-radius: 8px; margin-bottom: 16px; }
+.alerta-exito { background: #e8f6ee; border: 1px solid #a8dbbd; color: #1d6b40; }
+.alerta-error { background: #fdecea; border: 1px solid #f1aeb5; color: #8a1c1c; }
+.alerta-aviso { background: #fff8e5; border: 1px solid #f0d58a; color: #7a5a00; }
+
+/* Tablas */
+.resumen { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; color: var(--gris); }
+.resumen strong { color: var(--azul); }
+.tabla-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { background: var(--azul); color: #fff; text-align: left; padding: 11px 12px; font-size: .9rem; }
+td { padding: 11px 12px; border-bottom: 1px solid var(--borde); }
+tbody tr:nth-child(even) { background: #f7f9fc; }
+tbody tr:hover { background: #eaf1fa; }
+td.num, th.num { text-align: right; }
+td.acciones { white-space: nowrap; }
+td.acciones .form-inline { display: inline; }
+dl.datos { display: grid; grid-template-columns: 110px 1fr; gap: 10px 14px; margin: 0 0 18px; }
+dl.datos dt { font-weight: 600; color: var(--gris); }
+dl.datos dd { margin: 0; }
+
+/* Paginación */
+nav.paginacion { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: center; }
+.pag { padding: 7px 12px; border: 1px solid var(--borde); border-radius: 6px; text-decoration: none; color: var(--azul); background: #fff; font-size: .9rem; }
+a.pag:hover { background: #eaf1fa; }
+.pag.activa { background: var(--azul-claro); color: #fff; border-color: var(--azul-claro); font-weight: 700; }
+.pag.desactivada { color: #a9b2bf; background: #f3f5f8; }
+.info-pagina { width: 100%; text-align: center; color: var(--gris); font-size: .85rem; margin-top: 6px; }
+
+/* Responsive */
+@media (max-width: 860px) {
+    form.filtros { grid-template-columns: 1fr 1fr; }
+    form.filtros .acciones-form { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+    form.filtros { grid-template-columns: 1fr; }
+    .menu a { padding: 10px 12px; }
+    dl.datos { grid-template-columns: 1fr; }
+}
