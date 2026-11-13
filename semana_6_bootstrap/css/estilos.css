@@ -1,0 +1,32 @@
+/* css/estilos.css - estilos propios. Complementan a Bootstrap; no redefinen sus clases. */
+:root {
+    --gc-azul: #1f3a5f;
+    --gc-azul-oscuro: #16304f;
+}
+
+/* Barra de navegación con el color institucional */
+.navbar-gc { background-color: var(--gc-azul); }
+.navbar-gc .nav-link { padding-inline: .9rem; border-radius: .375rem; }
+.navbar-gc .nav-link.active { background-color: rgba(255, 255, 255, .15); }
+
+/* Icono dentro de las tarjetas de indicadores */
+.icono-indicador {
+    width: 3.5rem; height: 3.5rem; flex: 0 0 3.5rem;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: .85rem; font-size: 1.6rem;
+}
+.indicador-valor { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; line-height: 1.1; }
+
+/* Títulos de sección */
+.titulo-seccion { color: var(--gc-azul); }
+
+/* Tablas: encabezado discreto y números alineados */
+.tabla-gc thead th { white-space: nowrap; font-size: .85rem; text-transform: uppercase; letter-spacing: .02em; }
+.tabla-gc td.num, .tabla-gc th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Pantallas muy chicas: botones cómodos para tocar */
+@media (max-width: 575.98px) {
+    .btn { padding-block: .5rem; }
+    .btn-sm { padding-block: .35rem; }
+}
+.min-w-0 { min-width: 0; }
